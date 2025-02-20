@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    background-image: url("image//MediCare/src/main/webapp/image/360_F_133334155_X23HzbJKawbIgXVaub4bPM8CjpkS5uMS (1).jpg"); /* Path to your image */
+    background-size: cover; /* Cover the whole screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* No repeating */
+    height: 100vh; /* Full height */
+    margin: 0;
+    padding: 0;
+}
