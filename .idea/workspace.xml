@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="medicare:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fc9e2378-f0b8-4232-96e6-53126f09ca4c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.smarttomcat/MediCare/conf/catalina.policy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.smarttomcat/MediCare/conf/catalina.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.smarttomcat/MediCare/conf/context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.smarttomcat/MediCare/conf/jaspic-providers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.smarttomcat/MediCare/conf/jaspic-providers.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.smarttomcat/MediCare/conf/logging.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.smarttomcat/MediCare/conf/server.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.smarttomcat/MediCare/conf/tomcat-users.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.smarttomcat/MediCare/conf/tomcat-users.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.smarttomcat/MediCare/conf/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/MediCare/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Controller/ReservationServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DAO/PatientDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DAO/ReservationDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Model/Patient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Model/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/utils/DatabaseConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Patient/Patint.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/AjouterReservationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/Controller/AjouterReservationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/utils/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/Model/reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/reservationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/DAO/reservationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/webapp/Patient/Patient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/webapp/Patient/Patient.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2tLiEv5plbRiPnwnOU0VaSOKBmL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.index.jsp.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Smart Tomcat.Tomcat: medicare.executor": "Run",
+    "Tomcat Server.index.jsp.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Tomcat: medicare" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="" />
+      <option name="contextPath" value="/medicare" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/9.0.99" />
+          <option name="path" value="$PROJECT_DIR$/../../../../Program Files/Apache Software Foundation/Tomcat 9.0" />
+          <option name="version" value="9.0.99.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="medicare" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc9e2378-f0b8-4232-96e6-53126f09ca4c" name="Changes" comment="" />
+      <created>1740137648814</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740137648814</updated>
+      <workItem from="1740137650097" duration="14803000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
