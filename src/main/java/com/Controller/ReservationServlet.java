@@ -1,8 +1,10 @@
 package com.Controller;
 
-import java.sql.Connection;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -10,53 +12,69 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import com.Model.Reservation;
-import utils.DatabaseConnection;
 import com.DAO.PatientDAO;
 import com.DAO.ReservationDAO;
 
 @WebServlet("/ReserveServlet")
 public class ReservationServlet extends HttpServlet {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    private ReservationDAO reservationDAO;
+    private PatientDAO patientDAO;
+
+    @Override
+    public void init() {
+        reservationDAO = new ReservationDAO();
+        patientDAO = new PatientDAO();
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
 
-        String patientName = request.getParameter("PatientName");
-        String patientPhone = request.getParameter("PatientPhone");
-        int patientID = -1;
+        RequestDispatcher rd = req.getRequestDispatcher("/pages/reservation/create.jsp");
+        rd.forward(req, res);
+    }
 
-        try (Connection connection = DatabaseConnection.getConnection()) {
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse res)
+            throws ServletException, IOException {
 
-            PatientDAO patientDAO = new PatientDAO(connection);
-            ReservationDAO reservationDAO = new ReservationDAO(connection);
+        String patientName = req.getParameter("PatientName");
+        String patientPhone = req.getParameter("PatientPhone");
+        String status = req.getParameter("Status");
+        String motif = req.getParameter("Motif");
+        String dateString = req.getParameter("dateReservation");
 
-            if (patientName != null && !patientName.isEmpty()) {
-                patientID = patientDAO.ajouterPatient(patientName, patientPhone);
-            } else {
-                patientID = Integer.parseInt(request.getParameter("PatientID"));
-            }
+        int patientID = validatePatient(patientName, patientPhone);
 
-            int medID = 1;
-            String status = request.getParameter("Status");
-            String motif = request.getParameter("Motif");
-
-            String dateString = request.getParameter("dateReservation");
-            Date dateReservation;
-
-            if (dateString != null && !dateString.isEmpty()) {
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-                dateReservation = sdf.parse(dateString);
-            } else {
-                dateReservation = new Date(); // Default to today
+        if (patientID != -1) {
+            Date dateReservation = null;
+            try {
+                dateReservation = (dateString != null && !dateString.isEmpty()) ?
+                        new SimpleDateFormat("yyyy-MM-dd").parse(dateString) : new Date();
+            } catch (ParseException e) {
+                throw new RuntimeException(e);
             }
 
             Reservation reservation = new Reservation(patientID, status, motif, dateReservation);
-            reservationDAO.ajouterReservation(reservation, medID);
 
-            response.sendRedirect("liste-reservations.jsp");
+            reservationDAO.ajouterReservation(reservation, 1);
 
-        } catch (Exception e) {
-            e.printStackTrace();
-            response.sendRedirect("index.jsp");
+            res.sendRedirect("liste-reservations.jsp");
+        } else {
+            req.setAttribute("error", "Invalid patient details.");
+            req.getRequestDispatcher("/pages/reservation/create.jsp").forward(req, res);
         }
     }
+
+    private int validatePatient(String patientName, String patientPhone) {
+        int patientID = -1;
+        if (patientName != null && !patientName.isEmpty()) {
+            patientID = patientDAO.ajouterPatient(patientName, patientPhone);
+        }
+        return patientID;
+    }
 }
+
+
+

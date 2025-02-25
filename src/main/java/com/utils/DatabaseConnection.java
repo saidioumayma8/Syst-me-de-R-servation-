@@ -1,20 +1,28 @@
-package utils;
+package com.utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-    private static final String URL = "jdbc:mysql://localhost:3306/doctorrv";
-    private static final String USER = "root";
-    private static final String PASSWORD = "";
 
-    public static Connection getConnection() throws SQLException {
+    public static Connection getConnection() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver"); // Ensure MySQL JDBC Driver is loaded
-            return DriverManager.getConnection(URL, USER, PASSWORD);
+            String url = "jdbc:mysql://localhost:3306/doctorrv";
+            String user = "root";
+            String password = "root";
+            Connection connection = null;
+             Class.forName("com.mysql.jdbc.Driver");
+             try {
+                 connection = DriverManager.getConnection(url, user, password);
+             } catch (SQLException e) {
+                 e.printStackTrace();
+             }
+
+            return connection;
         } catch (ClassNotFoundException e) {
-            throw new SQLException("MySQL Driver not found!", e);
+            throw new RuntimeException(e);
         }
     }
 }
+

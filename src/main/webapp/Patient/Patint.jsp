@@ -16,8 +16,8 @@
 
 <div class="container mt-4">
     <h2 class="text-center">Prendre un Rendez-vous</h2>
-    <form action="./ReserveServlet" method="post">
-        <div class="form-group">
+    <form action="/medicare/ReserveServlet" method="post">
+    <div class="form-group">
             <label for="PatientName">Nom du Patient</label>
             <input type="text" class="form-control" name="PatientName" id="PatientName" required>
         </div>

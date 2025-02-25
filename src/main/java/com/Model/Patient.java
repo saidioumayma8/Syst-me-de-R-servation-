@@ -1,34 +1,39 @@
 package com.Model;
 
 public class Patient {
-    private String name;
-    private String email;
-    private String telephone;
+
+    private String Username;
+    private String Email;
+    private String Telephone;
+
 
     public Patient(String name, String email, String telephone) {
-        this.name = name;
-        this.email = email;
-        this.telephone = telephone;
+        this.Username = name;
+        this.Email = email;
+        this.Telephone = telephone;
     }
+
 
     public String getName() {
-        return name;
+        return Username;
     }
     public void setName(String name) {
-        this.name = name;
+        this.Username = name;
     }
+
 
     public String getEmail() {
-        return email;
+        return Email;
     }
     public void setEmail(String email) {
-        this.email = email;
+        this.Email = email;
     }
 
+
     public String getTelephone() {
-        return telephone;
+        return Telephone;
     }
     public void setTelephone(String telephone) {
-        this.telephone = telephone;
+        this.Telephone = telephone;
     }
 }
