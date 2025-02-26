@@ -41,6 +41,23 @@
   </dependencies>
 
   <build>
-    <finalName>medicare</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.4.0</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>11.0.22</version>
+        <configuration>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>

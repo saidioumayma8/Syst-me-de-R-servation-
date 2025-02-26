@@ -10,7 +10,7 @@ import java.sql.Statement;
 
 public class PatientDAO {
 
-    private Connection connection= DatabaseConnection.getConnection();
+    private Connection connection= DatabaseConnection.getInstance().getConnection();
 
 
 

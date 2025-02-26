@@ -6,23 +6,50 @@ import java.sql.SQLException;
 
 public class DatabaseConnection {
 
-    public static Connection getConnection() {
-        try {
-            String url = "jdbc:mysql://localhost:3306/doctorrv";
-            String user = "root";
-            String password = "root";
-            Connection connection = null;
-             Class.forName("com.mysql.jdbc.Driver");
-             try {
-                 connection = DriverManager.getConnection(url, user, password);
-             } catch (SQLException e) {
-                 e.printStackTrace();
-             }
+    private static DatabaseConnection instance = null;
+    private Connection connection = null;
 
-            return connection;
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+    private DatabaseConnection() throws SQLException {
+        init();
+    }
+
+    public static DatabaseConnection getInstance() {
+        synchronized (DatabaseConnection.class) {
+            try {
+                if (instance == null || !instance.connection.isClosed()) {
+                    instance = new DatabaseConnection();
+                }
+                return instance;
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
-}
 
+    public static void closeConnection() {
+        if (instance != null) {
+            try {
+                instance.getConnection().close();
+                instance = null;
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    private void init() throws SQLException {
+        final String url = "jdbc:mysql://localhost:3305/doctorrv";
+        final String username = "root";
+        final String password = "admin";
+        try {
+            connection = DriverManager.getConnection(url, username, password);
+            connection.setAutoCommit(false);
+        } catch (SQLException e) {
+            throw new SQLException(e);
+        }
+    }
+
+    public Connection getConnection() {
+        return connection;
+    }
+}

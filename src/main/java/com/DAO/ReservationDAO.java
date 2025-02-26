@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ReservationDAO {
 
-    private Connection connection= DatabaseConnection.getConnection();
+    private Connection connection= DatabaseConnection.getInstance().getConnection();
 
     public ReservationDAO() {
     }

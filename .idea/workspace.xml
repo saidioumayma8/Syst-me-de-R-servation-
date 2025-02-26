@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc9e2378-f0b8-4232-96e6-53126f09ca4c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Databasee.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/AjouterReservationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/Controller/AjouterReservationServlet.java" afterDir="false" />
@@ -18,10 +19,8 @@
       <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/reservationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/DAO/reservationDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/webapp/Patient/Patient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/webapp/Patient/Patient.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Controller/ReservationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Controller/ReservationServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/DAO/PatientDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DAO/PatientDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/DAO/ReservationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DAO/ReservationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Model/Patient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/DatabaseConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Patient/Patint.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Patient/Patint.jsp" afterDir="false" />
     </list>
@@ -48,9 +47,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2tLiEv5plbRiPnwnOU0VaSOKBmL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -62,11 +61,13 @@
     "JavaScript Debug.index.jsp.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.medicare [clean].executor": "Run",
+    "Maven.medicare [jetty:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Smart Tomcat.Tomcat: medicare.executor": "Run",
     "Tomcat Server.index.jsp.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/oumay/IdeaProjects/MediCare",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,6 +80,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn jetty:run" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat: medicare" type="com.poratu.idea.plugins.tomcat">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
@@ -107,14 +113,6 @@
       </method>
     </configuration>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -129,5 +127,22 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/DAO/PatientDAO.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/DAO/PatientDAO.java</url>
+          <line>12</line>
+          <properties field="connection" class="com.DAO.PatientDAO" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
