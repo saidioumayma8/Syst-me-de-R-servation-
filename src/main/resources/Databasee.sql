@@ -21,3 +21,16 @@ CREATE TABLE reservation (
                             FOREIGN KEY (patientID) REFERENCES Patient(id) ON DELETE CASCADE,
                             FOREIGN KEY (doctorID) REFERENCES Doctor(id) ON DELETE CASCADE
 );
+CREATE TABLE User (
+                      id INT AUTO_INCREMENT PRIMARY KEY,
+                      name VARCHAR(100) NOT NULL,
+                      email VARCHAR(255) UNIQUE NOT NULL,
+                      password VARCHAR(255) NOT NULL,
+                      role_id INT,
+                      FOREIGN KEY (role_id) REFERENCES Role(id) ON DELETE SET NULL
+);
+
+CREATE TABLE Role (
+                      id INT AUTO_INCREMENT PRIMARY KEY,
+                      role_name VARCHAR(50) UNIQUE NOT NULL
+);

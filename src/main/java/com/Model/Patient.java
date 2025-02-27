@@ -13,12 +13,14 @@ public class Patient {
         this.Telephone = telephone;
     }
 
+    public Patient(String username, Object email, String password, Object o, Object o1) {
+    }
 
-    public String getName() {
+    public String getUsername() {
         return Username;
     }
-    public void setName(String name) {
-        this.Username = name;
+    public void setUsername(String username) {
+        this.Username = username;
     }
 
 
@@ -35,6 +37,16 @@ public class Patient {
     }
     public void setTelephone(String telephone) {
         this.Telephone = telephone;
+    }
+
+    public boolean validateLogin() {
+        // Example: Logic for validation can be added here
+        return false; // Temporary return value
+    }
+
+    public boolean register() {
+        // Example: Logic for registration can be added here
+        return false; // Temporary return value
     }
 
 }
