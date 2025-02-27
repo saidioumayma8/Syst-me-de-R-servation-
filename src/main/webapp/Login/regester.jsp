@@ -11,15 +11,13 @@
 <div class="container">
     <h2 class="mt-5">Register</h2>
 
-    <!-- Display error message if registration fails -->
     <c:if test="${not empty errorMsg}">
         <div class="alert alert-danger">
                 ${errorMsg}
         </div>
     </c:if>
 
-    <!-- Register Form -->
-    <form action="RegisterServlet" method="POST">
+    <form action="ReserveServlet" method="POST">
         <div class="form-group">
             <label for="userType">I am a:</label>
             <select class="form-control" id="userType" name="userType" required>
@@ -28,13 +26,13 @@
             </select>
         </div>
 
-        <!-- Common fields for both patient & doctor -->
+
         <div class="form-group">
             <label for="username">Name</label>
             <input type="text" class="form-control" id="username" name="username" required>
         </div>
 
-        <!-- Fields for patients -->
+
         <div id="patientFields">
             <div class="form-group">
                 <label for="email">Email</label>
@@ -46,7 +44,7 @@
             </div>
         </div>
 
-        <!-- Fields for doctors -->
+
         <div id="doctorFields" style="display: none;">
             <div class="form-group">
                 <label for="specialization">Specialization</label>
