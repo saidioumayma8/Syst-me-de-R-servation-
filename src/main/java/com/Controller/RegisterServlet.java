@@ -25,26 +25,25 @@ public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         String role = req.getParameter("role");
         String name = req.getParameter("name");
-        String email = req.getParameter("email");
+        String email = req.getParameter("email");  // Now we are handling the email
         String phone = req.getParameter("phone");
         String password = req.getParameter("password");
 
         if ("patient".equals(role)) {
-            int patientId = patientDAO.ajouterPatient(name, phone);
+            Patient patient = new Patient(name, password, phone, email);  // Create patient with email
+            int patientId = patientDAO.ajouterPatient(patient);
             if (patientId != -1) {
-
                 res.sendRedirect("Patient/Patient.jsp");
             } else {
                 req.setAttribute("errorMsg", "Failed to register patient.");
                 req.getRequestDispatcher("/register.jsp").forward(req, res);
             }
         } else if ("doctor".equals(role)) {
-
             String specialty = req.getParameter("specialty");
-            int doctorId = doctorDAO.ajouterDoctor(name, specialty);
+            Doctor doctor = new Doctor(name, password, specialty);
+            int doctorId = doctorDAO.ajouterDoctor(doctor);
             if (doctorId != -1) {
-
-                res.sendRedirect("Patient/Patient.jsp");
+                res.sendRedirect("Doctor/Doctor.jsp");
             } else {
                 req.setAttribute("errorMsg", "Failed to register doctor.");
                 req.getRequestDispatcher("/register.jsp").forward(req, res);

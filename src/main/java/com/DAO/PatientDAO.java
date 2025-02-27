@@ -1,27 +1,28 @@
 package com.DAO;
 
 import com.utils.DatabaseConnection;
-import java.sql.*;
+import com.Model.Patient;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class PatientDAO {
 
     private Connection connection = DatabaseConnection.getInstance().getConnection();
 
-    public PatientDAO() {
-
-    }
-
-    public int ajouterPatient(String patientName, String patientPhone) {
-        String sql = "INSERT INTO patient (Username, Telephone) VALUES (?, ?)";
-        try (PreparedStatement stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-            stmt.setString(1, patientName);
-            stmt.setString(2, patientPhone);
-
+    public int ajouterPatient(Patient patient) {
+        String sql = "INSERT INTO patient (name, phone, email, password) VALUES (?, ?, ?, ?)";
+        try (PreparedStatement stmt = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
+            stmt.setString(1, patient.getName());
+            stmt.setString(2, patient.getPhone());
+            stmt.setString(3, patient.getEmail());
+            stmt.setString(4, patient.getPassword());
             int rowsAffected = stmt.executeUpdate();
             if (rowsAffected > 0) {
-                try (ResultSet generatedKeys = stmt.getGeneratedKeys()) {
+                try (var generatedKeys = stmt.getGeneratedKeys()) {
                     if (generatedKeys.next()) {
-                        return generatedKeys.getInt(1);  // Return the generated patientID
+                        return generatedKeys.getInt(1);  // Return generated patient ID
                     }
                 }
             }

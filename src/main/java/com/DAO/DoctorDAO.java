@@ -1,5 +1,6 @@
 package com.DAO;
 
+import com.Model.Doctor;
 import com.utils.DatabaseConnection;
 
 import java.sql.Connection;
@@ -29,5 +30,9 @@ public class DoctorDAO {
             e.printStackTrace();
         }
         return -1;
+    }
+
+    public int ajouterDoctor(Doctor doctor) {
+
     }
 }

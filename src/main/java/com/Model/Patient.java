@@ -1,52 +1,33 @@
 package com.Model;
 
-public class Patient {
+public class Patient extends User {
+    private String phone;
+    private String email;
 
-    private String Username;
-    private String Email;
-    private String Telephone;
-
-
-    public Patient(String name, String email, String telephone) {
-        this.Username = name;
-        this.Email = email;
-        this.Telephone = telephone;
+    public Patient(String name, String password, String phone, String email, Object o) {
+        super(name, password);  // Call the parent constructor
+        this.phone = phone;
+        this.email = email;
     }
 
-    public Patient(String username, Object email, String password, Object o, Object o1) {
+    // Getters and Setters
+    public String getPhone() {
+        return phone;
     }
 
-    public String getUsername() {
-        return Username;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
-    public void setUsername(String username) {
-        this.Username = username;
-    }
-
 
     public String getEmail() {
-        return Email;
+        return email;
     }
+
     public void setEmail(String email) {
-        this.Email = email;
-    }
-
-
-    public String getTelephone() {
-        return Telephone;
-    }
-    public void setTelephone(String telephone) {
-        this.Telephone = telephone;
+        this.email = email;
     }
 
     public boolean validateLogin() {
-        // Example: Logic for validation can be added here
-        return false; // Temporary return value
+        return false;
     }
-
-    public boolean register() {
-        // Example: Logic for registration can be added here
-        return false; // Temporary return value
-    }
-
 }
