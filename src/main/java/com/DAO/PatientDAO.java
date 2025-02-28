@@ -20,7 +20,7 @@ public class PatientDAO {
             stmt.setString(4, patient.getPassword());
             int rowsAffected = stmt.executeUpdate();
             if (rowsAffected > 0) {
-                try (var generatedKeys = stmt.getGeneratedKeys()) {
+                try (java.sql.ResultSet generatedKeys = stmt.getGeneratedKeys()) {
                     if (generatedKeys.next()) {
                         return generatedKeys.getInt(1);  // Return generated patient ID
                     }
@@ -30,5 +30,9 @@ public class PatientDAO {
             e.printStackTrace();
         }
         return -1;
+    }
+
+    public int ajouterPatient(String patientName, String patientPhone) {
+        return 1;
     }
 }
