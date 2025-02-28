@@ -10,12 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc9e2378-f0b8-4232-96e6-53126f09ca4c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DAO/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/AjouterReservationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/Controller/AjouterReservationServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/utils/DatabaseConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/Model/reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/reservationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/DAO/reservationDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/webapp/Patient/Patient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/webapp/Patient/Patient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Controller/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DAO/DoctorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DAO/DoctorDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Filters/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Filters/LoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Model/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Databasee.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Databasee.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +130,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740137648814</updated>
       <workItem from="1740137650097" duration="27967000" />
-      <workItem from="1740582207984" duration="19011000" />
+      <workItem from="1740582207984" duration="23947000" />
     </task>
     <servers />
   </component>

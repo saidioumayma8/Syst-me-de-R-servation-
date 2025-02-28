@@ -4,13 +4,13 @@ public class Patient extends User {
     private String phone;
     private String email;
 
-    public Patient(String name, String password, String phone, String email, Object o) {
-        super(name, password);  // Call the parent constructor
+    public Patient(String name, String password, String phone, String email) {
+        super(name, password);
         this.phone = phone;
         this.email = email;
     }
 
-    // Getters and Setters
+
     public String getPhone() {
         return phone;
     }
@@ -27,7 +27,5 @@ public class Patient extends User {
         this.email = email;
     }
 
-    public boolean validateLogin() {
-        return false;
-    }
+
 }

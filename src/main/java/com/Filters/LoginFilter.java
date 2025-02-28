@@ -17,7 +17,7 @@ public class LoginFilter implements Filter {
         HttpServletResponse res = (HttpServletResponse) response;
         HttpSession session = req.getSession(false);
 
-        String loginURI = req.getContextPath() + "/login.jsp";
+        String loginURI = req.getContextPath() + "Login/login.jsp";
         String registerURI = req.getContextPath() + "/register.jsp";
         boolean loggedIn = (session != null && session.getAttribute("user") != null);
         boolean loginRequest = req.getRequestURI().equals(loginURI) || req.getRequestURI().equals(registerURI);

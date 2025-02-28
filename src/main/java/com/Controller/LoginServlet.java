@@ -1,6 +1,8 @@
 package com.Controller;
 
+import com.DAO.UserDao;
 import com.Model.Patient;
+import com.Model.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -8,6 +10,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -15,15 +18,16 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        Patient patient = new Patient(username, null, password, null, null); // Email is not needed for login
-        boolean isValid = patient.validateLogin();
-
-        if (isValid) {
-            response.sendRedirect("dashboard.jsp");  // Redirect to the user's dashboard
-        } else {
-            request.setAttribute("errorMsg", "Invalid username or password");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+        User user = new User(username, password); // Email is not needed for login
+        UserDao userDao = new UserDao();
+        try {
+            userDao.loginByUserNameAndPassword(username, password);
+            System.out.println("Login Success");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
+
+
     }
 }
 

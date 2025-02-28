@@ -7,10 +7,10 @@ import java.sql.SQLException;
 public class DatabaseConnection {
 
     private static DatabaseConnection instance = null;
-    private Connection connection = null;
+    private static Connection connection = null;
 
     private DatabaseConnection() throws SQLException {
-        init();
+        //init();
     }
 
     public static DatabaseConnection getInstance() {
@@ -37,7 +37,7 @@ public class DatabaseConnection {
         }
     }
 
-    private void init() throws SQLException {
+    public static Connection conect() throws SQLException {
         final String url = "jdbc:mysql://localhost:3305/doctorrv";
         final String username = "root";
         final String password = "admin";
@@ -47,6 +47,7 @@ public class DatabaseConnection {
         } catch (SQLException e) {
             throw new SQLException(e);
         }
+        return connection;
     }
 
     public Connection getConnection() {

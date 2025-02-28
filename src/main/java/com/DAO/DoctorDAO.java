@@ -33,6 +33,6 @@ public class DoctorDAO {
     }
 
     public int ajouterDoctor(Doctor doctor) {
-
+  return 1;
     }
 }
