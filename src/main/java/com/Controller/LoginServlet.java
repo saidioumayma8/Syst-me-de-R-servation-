@@ -20,14 +20,15 @@ public class LoginServlet extends HttpServlet {
 
         User user = new User(username, password); // Email is not needed for login
         UserDao userDao = new UserDao();
-        try {
-            userDao.loginByUserNameAndPassword(username, password);
-            System.out.println("Login Success");
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        userDao.addUser(username, password);
+        System.out.println("Login Success");
 
 
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doGet(req, resp);
     }
 }
 

@@ -3,8 +3,8 @@ package com.Model;
 public class Doctor extends User {
     private String specialty;
 
-    public Doctor(String name, String password, String specialty) {
-        super(name, password);  // Call the parent constructor
+    public Doctor(String name, String email, String password, Role role, String specialty) {
+        super(name, email, password, role);
         this.specialty = specialty;
     }
 

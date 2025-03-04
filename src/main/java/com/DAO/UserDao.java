@@ -1,29 +1,47 @@
 package com.DAO;
 
-import com.utils.DatabaseConnection;
+import com.Model.User;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class UserDao {
 
-    public  boolean loginByUserNameAndPassword(String username,String password) throws SQLException {
+    // Database connection details (use your actual database URL, user, and password)
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/medicare"; // Example URL
+    private static final String DB_USER = "root";
+    private static final String DB_PASSWORD = "password";
 
-        String sql = "INSERT INTO patient (name, phone, email, password) VALUES (?, ?, ?, ?)";
-        Connection connection = DatabaseConnection.conect();
-        try (PreparedStatement stmt = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
-            stmt.setString(1, username);
-            stmt.setString(4, password);
+    // Method to get the connection
+    private Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+    }
 
-            if (stmt.executeUpdate() == 1) {
-                return true;
+    // Method to add a user to the database
+    public int addUser(User user) throws SQLException {
+        String query = "INSERT INTO users (name, email, password, role_name) VALUES (?, ?, ?, ?)";
+
+        try (Connection conn = getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+
+            stmt.setString(1, user.getUsername());
+            stmt.setString(2, user.getEmail());
+            stmt.setString(3, user.getPassword());
+            stmt.setString(4, user.getRole().getRoleName());
+
+            int rowsAffected = stmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                try (ResultSet generatedKeys = stmt.getGeneratedKeys()) {
+                    if (generatedKeys.next()) {
+                        return generatedKeys.getInt(1); // This returns the auto-generated user ID
+                    }
+                }
             }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
+            return -1; // If user could not be inserted
         }
+    }
 
-        return false;
+    public void addUser(String username, String password) {
+        return;
     }
 }

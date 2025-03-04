@@ -26,7 +26,7 @@
                 <a class="nav-link" href="doctor/Doctor.jsp">Espace Médecin</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Login/Login.jsp">Login</a>
+                <a class="nav-link" href="Login.jsp">Login</a>
             </li>
 
         </ul>

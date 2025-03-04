@@ -17,21 +17,26 @@
         </div>
     </c:if>
 
-    <form action="ReserveServlet" method="POST">
+    <form action="RegisterServlet" method="POST">
+
         <div class="form-group">
-            <label for="userType">I am a:</label>
-            <select class="form-control" id="userType" name="userType" required>
-                <option value="patient">Patient</option>
-                <option value="doctor">Doctor</option>
+            <label for="role">I am a:</label>
+            <select class="form-control" id="role" name="role" required>
+                <option value="Patient">Patient</option>
+                <option value="Doctor">Doctor</option>
             </select>
         </div>
 
 
         <div class="form-group">
-            <label for="username">Name</label>
+            <label for="username">Username</label>
             <input type="text" class="form-control" id="username" name="username" required>
         </div>
 
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
 
         <div id="patientFields">
             <div class="form-group">
@@ -43,7 +48,6 @@
                 <input type="text" class="form-control" id="phone" name="phone" required>
             </div>
         </div>
-
 
         <div id="doctorFields" style="display: none;">
             <div class="form-group">
@@ -57,11 +61,11 @@
 </div>
 
 <script>
-    document.getElementById("userType").addEventListener("change", function () {
+    document.getElementById("role").addEventListener("change", function () {
         var patientFields = document.getElementById("patientFields");
         var doctorFields = document.getElementById("doctorFields");
 
-        if (this.value === "doctor") {
+        if (this.value === "Doctor") {
             doctorFields.style.display = "block";
             patientFields.style.display = "none";
         } else {

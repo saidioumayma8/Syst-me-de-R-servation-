@@ -11,7 +11,10 @@ import java.sql.Statement;
 
 public class DoctorDAO {
 
-    private Connection connection = DatabaseConnection.getInstance().getConnection();
+    private Connection connection = DatabaseConnection.getConnection();
+
+    public DoctorDAO() throws SQLException {
+    }
 
     public int ajouterDoctor(String doctorName, String specialty) {
         String sql = "INSERT INTO doctor (name, specialty) VALUES (?, ?)";
@@ -32,7 +35,8 @@ public class DoctorDAO {
         return -1;
     }
 
-    public int ajouterDoctor(Doctor doctor) {
-  return 1;
+
+    public int addDoctor(Doctor doctor) {
+        return 2;
     }
 }

@@ -2,14 +2,16 @@ package com.Model;
 
 public class Patient extends User {
     private String phone;
-    private String email;
 
-    public Patient(String name, String password, String phone, String email) {
-        super(name, password);
+    public Patient(int userId, String name, String password, String phone, Role patient, String email) {
+        super(userId, name, email, password, patient);  // 🔹 Pass userId to parent
         this.phone = phone;
-        this.email = email;
     }
 
+    public Patient(String name, String password, String phone, Role patient, String email) {
+        super(name, email, password, patient);
+        this.phone = phone;
+    }
 
     public String getPhone() {
         return phone;
@@ -18,14 +20,4 @@ public class Patient extends User {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-
 }

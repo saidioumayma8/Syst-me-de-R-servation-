@@ -18,7 +18,6 @@
         </div>
     </c:if>
 
-    <!-- Login Form -->
     <form action="LoginServlet" method="POST">
         <div class="form-group">
             <label for="email">Email</label>
@@ -31,11 +30,10 @@
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
 
-    <!-- Link to Register Page -->
-    <p class="mt-3">Don't have an account? <a href="regester.jsp">Register here</a></p>
+    <p class="mt-3">Don't have an account? <a href="Register.jsp">Register here</a></p>
 </div>
 
-<!-- Bootstrap JS -->
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

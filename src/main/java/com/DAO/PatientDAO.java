@@ -5,24 +5,29 @@ import com.Model.Patient;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class PatientDAO {
+    private Connection connection;
 
-    private Connection connection = DatabaseConnection.getInstance().getConnection();
+    public PatientDAO() throws SQLException {
+        this.connection = DatabaseConnection.getConnection();
+    }
 
-    public int ajouterPatient(Patient patient) {
-        String sql = "INSERT INTO patient (name, phone, email, password) VALUES (?, ?, ?, ?)";
+    public int addPatient(Patient patient) {
+        String sql = "INSERT INTO patients (name, phone, email, password) VALUES (?, ?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
-            stmt.setString(1, patient.getName());
+            stmt.setString(1, patient.getUsername());
             stmt.setString(2, patient.getPhone());
             stmt.setString(3, patient.getEmail());
             stmt.setString(4, patient.getPassword());
+
             int rowsAffected = stmt.executeUpdate();
             if (rowsAffected > 0) {
-                try (java.sql.ResultSet generatedKeys = stmt.getGeneratedKeys()) {
+                try (ResultSet generatedKeys = stmt.getGeneratedKeys()) {
                     if (generatedKeys.next()) {
-                        return generatedKeys.getInt(1);  // Return generated patient ID
+                        return generatedKeys.getInt(1); // Return generated patient ID
                     }
                 }
             }
@@ -30,9 +35,5 @@ public class PatientDAO {
             e.printStackTrace();
         }
         return -1;
-    }
-
-    public int ajouterPatient(String patientName, String patientPhone) {
-        return 1;
     }
 }

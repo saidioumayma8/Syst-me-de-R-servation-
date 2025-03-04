@@ -9,9 +9,9 @@ import java.util.List;
 
 public class ReservationDAO {
 
-    private Connection connection= DatabaseConnection.getInstance().getConnection();
+    private Connection connection= DatabaseConnection.getConnection();
 
-    public ReservationDAO() {
+    public ReservationDAO() throws SQLException {
     }
 
     public void ajouterReservation(Reservation reservation, int medID) {
