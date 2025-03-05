@@ -3,15 +3,16 @@ package com.Model;
 public class Patient extends User {
     private String phone;
 
-    public Patient(int userId, String name, String password, String phone, Role patient, String email) {
-        super(userId, name, email, password, patient);  // 🔹 Pass userId to parent
+    public Patient(int userId, String name, String email, String password, Role patient, String phone) {
+        super(userId, name, email, password, patient);
         this.phone = phone;
     }
 
-    public Patient(String name, String password, String phone, Role patient, String email) {
+    public Patient(String name, String email, String password, Role patient, String phone) {
         super(name, email, password, patient);
         this.phone = phone;
     }
+
 
     public String getPhone() {
         return phone;

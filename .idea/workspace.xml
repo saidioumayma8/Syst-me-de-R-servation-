@@ -10,10 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc9e2378-f0b8-4232-96e6-53126f09ca4c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DAO/RegesterDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Controller/PatientServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/AjouterReservationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/Controller/AjouterReservationServlet.java" afterDir="false" />
@@ -21,22 +19,12 @@
       <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/Model/reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/reservationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/resources/DAO/reservationDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/webapp/Patient/Patient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Syst-me-de-R-servation-/src/main/webapp/Patient/Patient.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Controller/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Controller/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Controller/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Controller/ReservationServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/DAO/DoctorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DAO/DoctorDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/DAO/PatientDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DAO/PatientDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/DAO/ReservationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DAO/ReservationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DAO/RegesterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DAO/RegesterDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/DAO/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DAO/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Filters/LoginFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Model/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Model/Doctor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Model/Patient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login/Login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login/regester.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,32 +58,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.index.jsp.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.medicare [clean].executor": "Run",
-    "Maven.medicare [jetty:run].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Smart Tomcat.Tomcat: medicare.executor": "Run",
-    "Tomcat Server.Tomcat 9.0.99.executor": "Run",
-    "Tomcat Server.index.jsp.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/oumay/IdeaProjects/MediCare",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.index.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.medicare [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.medicare [jetty:run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Smart Tomcat.Tomcat: medicare.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.Tomcat 9.0.99.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.index.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/oumay/IdeaProjects/MediCare&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn jetty:run" />
@@ -199,9 +187,6 @@
       <option name="catalinaBase" value="C:\Users\oumay\.SmartTomcat\medicare\medicare" />
       <option name="contextPath" value="/medicare" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="port" value="8089" />
       <option name="tomcatInfo">
@@ -239,7 +224,9 @@
       <option name="presentableId" value="Default" />
       <updated>1740137648814</updated>
       <workItem from="1740137650097" duration="27967000" />
-      <workItem from="1740582207984" duration="51807000" />
+      <workItem from="1740582207984" duration="52806000" />
+      <workItem from="1741100259222" duration="13000" />
+      <workItem from="1741102545284" duration="8529000" />
     </task>
     <servers />
   </component>
